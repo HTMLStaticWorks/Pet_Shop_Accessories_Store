@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pet Shop | Page Not Found</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+  </div>
+
+  <style>
+    .notfound-hero { display:grid; place-items:center; min-height:80vh; padding:80px 24px; }
+    .notfound-card { text-align:center; max-width:760px; padding:48px; border-radius:16px; background:var(--surface); border:1px solid var(--border); box-shadow:var(--card-shadow); }
+    .notfound-card h1 { font-size:92px; margin:0 0 8px; color:var(--primary); }
+    .notfound-card h2 { font-size:22px; color:var(--text-primary); margin-bottom:12px; }
+    .notfound-card p { color:var(--text-secondary); margin-bottom:18px; }
+    .notfound-actions { display:flex; gap:12px; justify-content:center; margin-top:12px; flex-wrap:wrap; }
+    @media (max-width:600px) { .notfound-card { padding:28px; } .notfound-card h1 { font-size:64px; } }
+  </style>
+
+  <section class="notfound-hero">
+    <div class="notfound-card">
+      <h1>404</h1>
+      <h2>Oops! We lost the scent</h2>
+      <p>We couldn't find the page you were looking for. It might have wandered off or been moved.</p>
+
+      <div style="margin-top:18px;">
+        <input class="form-control" placeholder="Search (site-wide)" style="max-width:420px; display:inline-block; margin-bottom:12px;" />
+      </div>
+
+      <div class="notfound-actions">
+        <a href="index.html" class="btn btn-primary">Go Home</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        <a href="coming-soon.html" class="btn btn-secondary">See Coming Soon</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

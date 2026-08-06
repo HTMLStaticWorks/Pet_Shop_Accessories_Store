@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop | Premium Partner Brands</title>
+  <meta name="description"
+    content="Browse products by our trusted premium brands including Royal Canin, Purina Pro Plan, Hill's Science Diet, Pedigree, Whiskas, KONG, Chuckit!, Frontline, Zesty Paws, Tetra, and Kaytee.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .story-hero {
+      padding: 180px 0 100px;
+      background-color: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .brand-showcase-card {
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      text-align: center;
+    }
+
+    .brand-showcase-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border-color: var(--primary);
+    }
+
+    .brand-logo-large {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .offer-banner {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      cursor: pointer;
+      font-weight: 550;
+      font-size: 15px;
+    }
+
+    .faq-icon {
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--secondary);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-content {
+      display: none;
+      padding-bottom: 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .faq-item.open .faq-content {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">P</div>
+          <span class="logo-text">PET SHOP</span>
+        </a>
+      </div>
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"
+                fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;">
+                <path d="M7 10l5 5 5-5z" />
+              </svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Store</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="dogs.html" class="nav-link">Dogs</a>
+        <a href="cats.html" class="nav-link">Cats</a>
+        <a href="birds.html" class="nav-link">Birds</a>
+        <a href="fish.html" class="nav-link">Fish</a>
+        <a href="grooming.html" class="nav-link">Grooming</a>
+        <a href="brands.html" class="nav-link active">Brands</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Store</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="dogs.html" class="nav-link">Dogs</a>
+      <a href="cats.html" class="nav-link">Cats</a>
+      <a href="birds.html" class="nav-link">Birds</a>
+      <a href="fish.html" class="nav-link">Fish</a>
+      <a href="grooming.html" class="nav-link">Grooming</a>
+      <a href="brands.html" class="nav-link active">Brands</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="story-hero">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.15em;">Certified
+        Partner Brands</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Trusted World-Class Brands</h1>
+      <p
+        style="max-width: 680px; margin: 24px auto 0; color: var(--text-secondary); font-size: 18px; line-height: 1.8; font-weight: 480;">
+        We partner directly with leading veterinary nutritionists, certified manufacturers, and premium brands to bring
+        you top-tier products you can trust.</p>
+    </div>
+  </section>
+
+  <!-- Exclusive Offers Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span
+          style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Special
+          Promotion</span>
+        <h2 style="margin-top: 12px;">Exclusive Partner Offers</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="offer-banner">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Royal Canin Subscription Deal</h3>
+            <p style="font-size: 14px; color: var(--text-secondary);">Save 20% on your first auto-ship order of any
+              Royal Canin breed-specific formulas.</p>
+          </div>
+          <a href="dogs.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 13px;">Claim Offer</a>
+        </div>
+        <div class="offer-banner">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">KONG Toy Bundle</h3>
+            <p style="font-size: 14px; color: var(--text-secondary);">Buy any 2 KONG classic rubber chew toys and get a
+              canister of stuffing paste free.</p>
+          </div>
+          <a href="dogs.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 13px;">Shop KONG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Catalog Grid -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 style="margin-top: 12px;">Our Roster of Premium Brands</h2>
+        <p style="color: var(--text-secondary); max-width: 580px; margin: 12px auto 0;">Click on any brand to view their
+          catalog of premium products, certified for quality and safety.</p>
+      </div>
+
+      <div class="brand-grid">
+
+        <!-- Royal Canin -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">Royal Canin</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">Tailored
+              breed-specific nutrition, offering precise formulas to meet your dog or cat's unique size, age, and health
+              profile.</p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">4.9★ (3k+ reviews)</span>
+            <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+        <!-- Purina Pro Plan -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">Purina Pro Plan</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+              High-performance nutrition backed by 500+ scientists. Focuses on digestive health, cognitive strength, and
+              coat vitality.</p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">4.8★ (2.5k+ reviews)</span>
+            <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+        <!-- Hill's Science Diet -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">Hill's Science</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+              Biology-based nutrition developed by veterinarians. Clinically proven ingredients to help maintain weight
+              and organ function.</p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">4.9★ (1.8k+ reviews)</span>
+            <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+        <!-- KONG -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">KONG</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">The gold
+              standard in dog toys. Durable natural rubber toys that satisfy instinctual needs and prevent boredom.</p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">5.0★ (5k+ reviews)</span>
+            <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+        <!-- Zesty Paws -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">Zesty Paws</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">Premium
+              functional soft chews loaded with active, branded ingredients. Supports joint function, gut health, and
+              immunity.</p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">4.8★ (1.2k+ reviews)</span>
+            <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+        <!-- Frontline -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">Frontline</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">Flea, tick,
+              and lice treatment solutions. Waterproof and long-lasting monthly protection recommended by veterinarians.
+            </p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">4.7★ (4k+ reviews)</span>
+            <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+        <!-- Tetra -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">Tetra</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">Innovative
+              aquatic solutions. High-quality fish flakes, water conditioners, and filtration equipment for successful
+              fishkeeping.</p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">4.8★ (900+ reviews)</span>
+            <a href="fish.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+        <!-- Kaytee -->
+        <div class="brand-showcase-card">
+          <div>
+            <div class="brand-logo-large">Kaytee</div>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">Dedicated
+              bird and small animal nutrition. Premium seed blends, nesting materials, and behavioral toys.</p>
+
+          </div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: var(--text-secondary);">4.9★ (1.1k+ reviews)</span>
+            <a href="birds.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px; text-align: center; display: block; width: 100%;">View Products</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Certifications -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span
+          style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Safety
+          First</span>
+        <h2>Strict Quality Certifications</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <div class="cert-badge">
+          <div
+            style="display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: rgba(20, 184, 166, 0.1); color: var(--primary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">USDA Organic Certified</h4>
+            <p style="font-size: 13px; color: var(--text-secondary);">All organic partner brands are USDA certified,
+              containing no GMOs or chemical pesticides.</p>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <div
+            style="display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: rgba(20, 184, 166, 0.1); color: var(--primary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">AAFCO Standard Verified</h4>
+            <p style="font-size: 13px; color: var(--text-secondary);">Pet food brands meet nutritional profiles set by
+              the Association of American Feed Control Officials.</p>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <div
+            style="display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: rgba(20, 184, 166, 0.1); color: var(--primary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 21h14"></path>
+              <path
+                d="M5 21a2 2 0 0 1-2-2 2 2 0 0 1 1-1.74l5.25-9.26A2 2 0 0 0 10 7.05V3h4v4.05a2 2 0 0 0 .75 1.95L20 18.26A2 2 0 0 1 21 20a2 2 0 0 1-2 2">
+              </path>
+              <path d="M8.5 14h7"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">Third-Party Tested</h4>
+            <p style="font-size: 13px; color: var(--text-secondary);">Supplements and wellness remedies undergo rigorous
+              third-party batch analysis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding"
+    style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); text-align: center;">
+    <div class="container">
+      <h2 style="color: #FAF8F3; margin-bottom: 16px;">Shop Trusted Brands with Confidence</h2>
+      <p
+        style="color: rgba(250,248,243,0.9); max-width: 540px; margin: 0 auto 32px; font-size: 15px; line-height: 1.7;">
+        Enjoy free shipping on all orders over $49 and 30-day returns on your favorite certified partner products.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="dogs.html" class="btn btn-secondary"
+          style="color: #FAF8F3; border-color: rgba(250,248,243,0.8); padding: 14px 28px;">Browse Dog Catalog</a>
+        <a href="cats.html" class="btn"
+          style="background: rgba(250,248,243,0.2); color: #FAF8F3; border: 1px solid rgba(250,248,243,0.5); padding: 14px 28px; border-radius: 8px; font-weight: 550; font-size: 14px;">Browse
+          Cat Catalog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="index.html" class="logo-container" style="margin-bottom: 20px; text-decoration: none;">
+            <div class="logo-icon">P</div>
+            <span class="logo-text">PET SHOP</span>
+          </a>
+          <p style="margin-bottom: 24px; max-width: 320px;">Your one-stop destination for premium pet supplies, food,
+            and grooming services.</p>
+        </div>
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="fish.html">Fish &amp; Aquatics</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="grooming.html">Professional Grooming</a></li>
+            <li><a href="contact.html">Veterinary Advice</a></li>
+            <li><a href="brands.html">Brand Catalog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Support &amp; FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 Pet Shop Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.faq-header').forEach(h => {
+      h.addEventListener('click', () => {
+        const item = h.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+
+</html>

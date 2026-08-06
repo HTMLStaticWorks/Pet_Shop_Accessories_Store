@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop | Dogs — Premium Food, Toys & Accessories</title>
+  <meta name="description"
+    content="Shop premium dog food, healthy treats, chew toys, interactive puzzle toys, leashes, harnesses, orthopedic beds, grooming essentials, and wellness supplements for your dog.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .story-hero {
+      padding: 180px 0 100px;
+      background-color: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 10px 24px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 520;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      font-family: var(--font-sans);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: var(--primary);
+      color: #FAF8F3;
+      border-color: var(--primary);
+    }
+
+    .badge-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      margin-right: 4px;
+      margin-bottom: 8px;
+    }
+
+    .review-card {
+      padding: 32px;
+      border-radius: 16px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .stars {
+      color: #f4a261;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      cursor: pointer;
+      font-weight: 550;
+      font-size: 15px;
+    }
+
+    .faq-icon {
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--secondary);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-content {
+      display: none;
+      padding-bottom: 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .faq-item.open .faq-content {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">P</div>
+          <span class="logo-text">PET SHOP</span>
+        </a>
+      </div>
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"
+                fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;">
+                <path d="M7 10l5 5 5-5z" />
+              </svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Store</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="dogs.html" class="nav-link active">Dogs</a>
+        <a href="cats.html" class="nav-link">Cats</a>
+        <a href="birds.html" class="nav-link">Birds</a>
+        <a href="fish.html" class="nav-link">Fish</a>
+        <a href="grooming.html" class="nav-link">Grooming</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Store</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="dogs.html" class="nav-link active">Dogs</a>
+      <a href="cats.html" class="nav-link">Cats</a>
+      <a href="birds.html" class="nav-link">Birds</a>
+      <a href="fish.html" class="nav-link">Fish</a>
+      <a href="grooming.html" class="nav-link">Grooming</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="story-hero">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.15em;">Dogs
+        Collection</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Premium Dog Supplies &amp; Accessories</h1>
+      <p
+        style="max-width: 680px; margin: 24px auto 0; color: var(--text-secondary); font-size: 18px; line-height: 1.8; font-weight: 480;">
+        Your ultimate destination for everything your loyal companion deserves — from premium dog food &amp; healthy
+        treats, to chew toys, orthopedic beds, grooming essentials, wellness supplements, and travel accessories.</p>
+    </div>
+  </section>
+
+  <!-- Product Catalog -->
+  <section class="section-padding" id="catalog" style="border-top: 1px solid var(--border);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 16px;">
+        <span
+          style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Best
+          Sellers</span>
+        <h2 style="margin-top: 12px;">Top Dog Products</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px; max-width: 560px; margin-inline: auto;">Vet-approved,
+          breed-tested, and loved by thousands of dog owners nationwide.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All Products</button>
+        <button class="filter-btn" data-filter="food">Food &amp; Treats</button>
+        <button class="filter-btn" data-filter="treats">Treats</button>
+        <button class="filter-btn" data-filter="toys">Toys</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+        <button class="filter-btn" data-filter="beds">Beds &amp; Comfort</button>
+        <button class="filter-btn" data-filter="health">Health</button>
+      </div>
+
+      <div class="product-grid" id="catalog-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card catalog-item" data-category="food">
+          <span class="product-card-badge">Best Seller</span>
+          <div class="product-card-image">
+            <img src="assets/images/dog-img1.jpg" alt="Premium Grain-Free Dry Kibble">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">Grain-Free</span><span class="badge-pill">High
+                  Protein</span></div>
+              <span class="product-meta">Dry &amp; Wet Food</span>
+              <h3 class="product-title">Premium Grain-Free Kibble</h3>
+              <p class="product-excerpt">Real chicken, sweet potato &amp; active probiotics formulated for optimal
+                canine gut health and coat vitality.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$14.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card catalog-item" data-category="food">
+          <div class="product-card-image">
+            <img src="assets/images/dog-img2.jpg" alt="Gourmet Wet Salmon Cans">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">Organic</span><span
+                  class="badge-pill">Sensitive Stomach</span></div>
+              <span class="product-meta">Wet Food</span>
+              <h3 class="product-title">Gourmet Wet Salmon Cans</h3>
+              <p class="product-excerpt">Wild-caught salmon with garden vegetables. Perfect for dogs with skin or
+                stomach sensitivities.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$15.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card catalog-item" data-category="treats">
+          <span class="product-card-badge">Vet Pick</span>
+          <div class="product-card-image">
+            <img src="assets/images/dog-img3.jpg" alt="Natural Training Treats">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">Natural</span><span class="badge-pill">Low
+                  Calorie</span></div>
+              <span class="product-meta">Healthy Treats</span>
+              <h3 class="product-title">Natural Training Treats</h3>
+              <p class="product-excerpt">Bite-sized, oven-baked treats perfect for reward-based training. Made with real
+                beef and no artificial additives.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$8.50</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card catalog-item" data-category="toys">
+          <span class="product-card-badge">Daily Play</span>
+          <div class="product-card-image">
+            <img src="assets/images/dog-img4.jpg" alt="Indestructible Rubber Chew Bone">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">Durable Rubber</span><span
+                  class="badge-pill">Teething Relief</span></div>
+              <span class="product-meta">Chew Toys</span>
+              <h3 class="product-title">Indestructible Rubber Chew Bone</h3>
+              <p class="product-excerpt">Non-toxic natural rubber. Designed for aggressive chewers while helping clean
+                teeth and massage gums.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$11.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card catalog-item" data-category="toys">
+          <div class="product-card-image">
+            <img src="assets/images/dog-img5.jpg" alt="Interactive Puzzle Treat Dispenser">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">Interactive</span><span class="badge-pill">IQ
+                  Booster</span></div>
+              <span class="product-meta">Puzzle Toys</span>
+              <h3 class="product-title">Interactive Puzzle Treat Dispenser</h3>
+              <p class="product-excerpt">Keep your dog mentally sharp! Fill this Level-3 slow-feeding puzzle with dry
+                treats to stimulate problem-solving.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$12.50</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card catalog-item" data-category="accessories">
+          <div class="product-card-image">
+            <img src="assets/images/dog-img6.jpg" alt="Reflective Safety Dog Harness">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">No-Pull</span><span
+                  class="badge-pill">Reflective Nylon</span></div>
+              <span class="product-meta">Harnesses</span>
+              <h3 class="product-title">Reflective Safety Harness</h3>
+              <p class="product-excerpt">Ergonomic no-pull harness with reflective stitching for safe nighttime walks.
+                Adjustable fit for all breeds.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$16.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nutrition Benefits Editorial -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); ">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="visual-pane fade-in">
+          <img src="assets/images/nutrition.jpg" alt="Premium dog nutrition and ingredients">
+        </div>
+        <div class="fade-in" style="text-align: start;">
+          <span
+            style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Nutrition
+            Science</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">Why Premium Nutrition Changes Everything</h2>
+          <p style="margin-bottom: 16px;">A dog's diet directly impacts their coat shine, energy levels, joint health,
+            and lifespan. Our premium grain-free formulas are developed in partnership with board-certified veterinary
+            nutritionists to deliver the exact macronutrient ratios your dog needs.</p>
+          <p style="margin-bottom: 24px;">High-quality protein from named meat sources (not "meat meal"), omega-3-rich
+            fish oils, natural antioxidants, and precision-balanced minerals — every bag we stock is ingredient-verified
+            and clinic-tested.</p>
+          <ul
+            style="list-style: none; padding: 0; margin-bottom: 28px; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><span
+                style="color: var(--secondary); font-size: 18px;">✓</span> Real, named protein as the #1 ingredient</li>
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><span
+                style="color: var(--secondary); font-size: 18px;">✓</span> No artificial colours, flavours, or
+              preservatives</li>
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><span
+                style="color: var(--secondary); font-size: 18px;">✓</span> Cold-pressed or oven-baked for maximum
+              nutrient retention</li>
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><span
+                style="color: var(--secondary); font-size: 18px;">✓</span> Life-stage specific formulations (puppy,
+              adult, senior)</li>
+          </ul>
+          <a href="brands.html" class="btn btn-primary">Explore Our Food Brands</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grooming Services CTA -->
+  <section class="section-padding" style="border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="editorial-grid reverse">
+        <div class="visual-pane fade-in">
+          <img src="assets/images/spa-service.jpg" alt="Professional dog grooming spa">
+        </div>
+        <div class="fade-in" style="text-align: start;">
+          <span
+            style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Pet
+            Spa Services</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">Professional Dog Grooming Packages</h2>
+          <p style="margin-bottom: 16px;">Keep your dog looking and feeling their best with our certified grooming
+            services. From hydrating oatmeal baths and breed-standard haircuts to nail grinding and de-shedding
+            treatments — all in a calm, stress-free environment.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <div><strong style="font-size: 14px;">Breed-Standard Styling</strong><br><span
+                  style="font-size: 13px; color: var(--text-secondary);">From $45</span></div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <div><strong style="font-size: 14px;">Oatmeal Spa Bath</strong><br><span
+                  style="font-size: 13px; color: var(--text-secondary);">From $35</span></div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <div><strong style="font-size: 14px;">Nail Trim &amp; Grind</strong><br><span
+                  style="font-size: 13px; color: var(--text-secondary);">From $15</span></div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <div><strong style="font-size: 14px;">De-Shedding Therapy</strong><br><span
+                  style="font-size: 13px; color: var(--text-secondary);">From $55</span></div>
+            </div>
+          </div>
+          <a href="grooming.html" class="btn btn-primary">Book a Grooming Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="index.html" class="logo-container" style="margin-bottom: 20px; text-decoration: none;">
+            <div class="logo-icon">P</div>
+            <span class="logo-text">PET SHOP</span>
+          </a>
+          <p style="margin-bottom: 24px; max-width: 320px;">Your one-stop destination for premium pet supplies, food,
+            and grooming services.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to Pet Shop!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+        </div>
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="fish.html">Fish &amp; Aquatics</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="grooming.html">Professional Grooming</a></li>
+            <li><a href="grooming.html">Pet Training Classes</a></li>
+            <li><a href="contact.html">Veterinary Advice</a></li>
+            <li><a href="brands.html">Brand Catalog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Wholesale Enquiries</a></li>
+            <li><a href="contact.html">Support &amp; FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 Pet Shop Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Product filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const catalogItems = document.querySelectorAll('.catalog-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.getAttribute('data-filter');
+        catalogItems.forEach(item => {
+          if (f === 'all' || item.getAttribute('data-category') === f) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+    // FAQ accordion
+    document.querySelectorAll('.faq-header').forEach(h => {
+      h.addEventListener('click', () => {
+        const item = h.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+
+</html>

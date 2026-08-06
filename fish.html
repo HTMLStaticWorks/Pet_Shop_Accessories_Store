@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop | Fish & Aquatics — Aquariums, Fish Food & Accessories</title>
+  <meta name="description"
+    content="Shop aquariums, tropical and coldwater fish food, water conditioners, aquarium plants, filters, heaters, lighting, gravel, decor, and fish health treatments for freshwater and marine setups.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .story-hero {
+      padding: 180px 0 100px;
+      background-color: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 10px 24px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 520;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      font-family: var(--font-sans);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: var(--primary);
+      color: #FAF8F3;
+      border-color: var(--primary);
+    }
+
+    .badge-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      margin-right: 4px;
+      margin-bottom: 8px;
+    }
+
+    .review-card {
+      padding: 32px;
+      border-radius: 16px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .stars {
+      color: #f4a261;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .aquarium-step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px;
+      border-radius: 12px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #FAF8F3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">P</div><span class="logo-text">PET SHOP</span>
+        </a>
+      </div>
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">Home <span class="caret"><svg
+                xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"
+                style="vertical-align:middle;margin-inline-start:4px;">
+                <path d="M7 10l5 5 5-5z" />
+              </svg></span></button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Store</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="dogs.html" class="nav-link">Dogs</a>
+        <a href="cats.html" class="nav-link">Cats</a>
+        <a href="birds.html" class="nav-link">Birds</a>
+        <a href="fish.html" class="nav-link active">Fish</a>
+        <a href="grooming.html" class="nav-link">Grooming</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions"><button class="hamburger"
+          aria-label="Toggle Menu"><span></span><span></span><span></span></button></div>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Store</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="dogs.html" class="nav-link">Dogs</a>
+      <a href="cats.html" class="nav-link">Cats</a>
+      <a href="birds.html" class="nav-link">Birds</a>
+      <a href="fish.html" class="nav-link active">Fish</a>
+      <a href="grooming.html" class="nav-link">Grooming</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="story-hero">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.15em;">Fish
+        &amp; Aquatics</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Create Your Perfect Aquarium World</h1>
+      <p
+        style="max-width: 680px; margin: 24px auto 0; color: var(--text-secondary); font-size: 18px; line-height: 1.8; font-weight: 480;">
+        Tanks, filtration, heaters, lighting, aquatic plants, tropical fish food, water conditioners, gravel, live rock,
+        coral, and health treatments — everything for freshwater and marine aquarium setups.</p>
+    </div>
+  </section>
+
+
+
+  <!-- Product Catalog -->
+  <section class="section-padding" id="catalog" style=" border-top: 1px solid var(--border);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 16px;">
+        <span
+          style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Best
+          Sellers</span>
+        <h2 style="margin-top: 12px;">Top Aquarium Products</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px; max-width: 560px; margin-inline: auto;">From beginner
+          nano tanks to professional reef setups — everything you need is here.</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="tanks">Tanks</button>
+        <button class="filter-btn" data-filter="filtration">Filtration</button>
+        <button class="filter-btn" data-filter="food">Fish Food</button>
+        <button class="filter-btn" data-filter="water">Water Care</button>
+        <button class="filter-btn" data-filter="decor">Plants &amp; Decor</button>
+        <button class="filter-btn" data-filter="health">Health</button>
+      </div>
+      <div class="product-grid">
+
+        <div class="product-card catalog-item" data-category="tanks">
+          <span class="product-card-badge">Best Seller</span>
+          <div class="product-card-image"><img src="assets/images/fish-img1.jpg"
+              alt="20 Gallon Freshwater Aquarium Starter Kit"></div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">LED Lighting</span><span
+                  class="badge-pill">Filter Included</span></div>
+              <span class="product-meta">Aquarium Starter Kits</span>
+              <h3 class="product-title">20-Gallon Freshwater Starter Kit</h3>
+              <p class="product-excerpt">Complete beginner kit with glass tank, quiet hang-on filter, LED hood lighting,
+                and fish-safe silicone. Ready to cycle in 24 hrs.</p>
+            </div>
+            <div class="product-footer"><span class="product-price">$89.00</span><a href="product-details.html"
+                class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View Product</a></div>
+          </div>
+        </div>
+
+        <div class="product-card catalog-item" data-category="tanks">
+          <div class="product-card-image"><img src="assets/images/fish-img2.jpg" alt="Nano Betta Tank Cube"></div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">5-Gallon</span><span
+                  class="badge-pill">Betta-Perfect</span></div>
+              <span class="product-meta">Nano Tanks</span>
+              <h3 class="product-title">Curved Glass Betta Nano Tank</h3>
+              <p class="product-excerpt">Curved front glass 5-gallon tank with built-in sponge filter, LED lighting, and
+                quiet submersible pump. Ideal for betta fish.</p>
+            </div>
+            <div class="product-footer"><span class="product-price">$39.00</span><a href="product-details.html"
+                class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View Product</a></div>
+          </div>
+        </div>
+
+        <div class="product-card catalog-item" data-category="tanks">
+          <span class="product-card-badge">Reef Ready</span>
+          <div class="product-card-image"><img src="assets/images/fish-img3.jpg" alt="Marine Reef Aquarium System">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">55-Gallon</span><span class="badge-pill">Reef
+                  Ready Overflow</span></div>
+              <span class="product-meta">Marine Aquariums</span>
+              <h3 class="product-title">Marine Reef System — 55 Gallon</h3>
+              <p class="product-excerpt">Rimless low-iron glass marine aquarium with built-in overflow, return pump
+                fitting, and tank-ready drilled holes for sumps.</p>
+            </div>
+            <div class="product-footer"><span class="product-price">$299.00</span><a href="product-details.html"
+                class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View Product</a></div>
+          </div>
+        </div>
+
+        <div class="product-card catalog-item" data-category="filtration">
+          <span class="product-card-badge">Quiet &amp; Powerful</span>
+          <div class="product-card-image"><img src="assets/images/fish-img4.jpg" alt="External Canister Filter"></div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">3-Stage Filtration</span><span
+                  class="badge-pill">Up to 100 Gal</span></div>
+              <span class="product-meta">Canister Filters</span>
+              <h3 class="product-title">Pro External Canister Filter</h3>
+              <p class="product-excerpt">Ultra-quiet 3-stage biological, mechanical, and chemical filtration with
+                self-priming push-button start. Handles up to 100 gallons.</p>
+            </div>
+            <div class="product-footer"><span class="product-price">$79.00</span><a href="product-details.html"
+                class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View Product</a></div>
+          </div>
+        </div>
+
+        <div class="product-card catalog-item" data-category="food">
+          <div class="product-card-image"><img src="assets/images/fish-img5.jpg" alt="Tropical Flake Food"></div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">All Tropical Fish</span><span
+                  class="badge-pill">Spirulina Enriched</span></div>
+              <span class="product-meta">Fish Food</span>
+              <h3 class="product-title">Premium Tropical Flake Food</h3>
+              <p class="product-excerpt">Spirulina-enriched flake food with natural colour-enhancing astaxanthin. Ideal
+                for tetras, guppies, mollies, and barbs.</p>
+            </div>
+            <div class="product-footer"><span class="product-price">$8.00</span><a href="product-details.html"
+                class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View Product</a></div>
+          </div>
+        </div>
+
+        <div class="product-card catalog-item" data-category="food">
+          <span class="product-card-badge">Vet Pick</span>
+          <div class="product-card-image"><img src="assets/images/fish-img1.jpg" alt="Cichlid Pellet Food"></div>
+          <div class="product-card-info">
+            <div>
+              <div style="margin-bottom: 10px;"><span class="badge-pill">Sinking Pellets</span><span
+                  class="badge-pill">High Protein</span></div>
+              <span class="product-meta">Cichlid Food</span>
+              <h3 class="product-title">African Cichlid Sinking Pellets</h3>
+              <p class="product-excerpt">High-protein sinking pellets designed for the feeding behaviour of cichlids.
+                Includes spirulina and color-enhancing carotenoids.</p>
+            </div>
+            <div class="product-footer"><span class="product-price">$11.00</span><a href="product-details.html"
+                class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View Product</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Maintenance Tips Editorial -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="visual-pane fade-in">
+          <img src="assets/images/fish-nutrition.jpg" alt="Lush planted aquarium with colorful fish">
+        </div>
+        <div class="fade-in" style="text-align: start;">
+          <span
+            style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Aquarium
+            Maintenance</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">Keep Your Aquarium Crystal Clear &amp; Thriving</h2>
+          <p style="margin-bottom: 16px;">A well-maintained aquarium is a healthy aquarium. Regular maintenance prevents
+            disease outbreaks, keeps water parameters stable, and ensures your fish live long, vibrant lives.</p>
+          <ul
+            style="list-style: none; padding: 0; margin-bottom: 28px; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px;">
+              <span class="icon" style="color: var(--secondary); display: flex; align-items: center; flex-shrink: 0; margin-top: 3px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <div><strong>Weekly 25% Water Change:</strong> Remove detritus from gravel and replace 25% of water with
+                treated tap water.</div>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px;">
+              <span class="icon" style="color: var(--secondary); display: flex; align-items: center; flex-shrink: 0; margin-top: 3px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <div><strong>Test Parameters Weekly:</strong> Check pH, ammonia, nitrite, and nitrate weekly to catch
+                issues before they become problems.</div>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px;">
+              <span class="icon" style="color: var(--secondary); display: flex; align-items: center; flex-shrink: 0; margin-top: 3px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <div><strong>Clean Algae Monthly:</strong> Scrub glass, clean filter media in old tank water (not tap),
+                and trim any overgrown live plants.</div>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px;">
+              <span class="icon" style="color: var(--secondary); display: flex; align-items: center; flex-shrink: 0; margin-top: 3px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <div><strong>Monitor Temperature Daily:</strong> Use a digital thermometer. Temperature swings of more
+                than 2°F stress fish and can suppress immune function.</div>
+            </li>
+          </ul>
+          <a href="#catalog" class="btn btn-primary">Shop Aquarium Maintenance Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aquarium Setup Guide -->
+  <section class="section-padding" id="setup-guide">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span
+          style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Beginner's
+          Guide</span>
+        <h2 style="margin-top: 12px;">Step-by-Step Aquarium Setup Guide</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px; max-width: 560px; margin-inline: auto;">Follow these
+          six steps to safely set up your first aquarium and create a healthy, thriving aquatic environment.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="aquarium-step fade-in">
+          <div class="step-num">1</div>
+          <div><strong style="font-size: 15px;">Choose the Right Tank Size</strong>
+            <p style="margin: 8px 0 0; font-size: 14px; color: var(--text-secondary);">Bigger tanks are more stable and
+              easier to maintain. Begin with a minimum 20-gallon tank for freshwater community fish. Smaller tanks
+              experience parameter swings much faster and are harder to manage for beginners.</p>
+          </div>
+        </div>
+        <div class="aquarium-step fade-in">
+          <div class="step-num">2</div>
+          <div><strong style="font-size: 15px;">Add Substrate &amp; Decor</strong>
+            <p style="margin: 8px 0 0; font-size: 14px; color: var(--text-secondary);">Rinse aquarium gravel or sand
+              thoroughly. Add driftwood, rocks, and decorations to create hiding spots. If using live plants, use
+              nutrient-rich planted substrate.</p>
+          </div>
+        </div>
+        <div class="aquarium-step fade-in">
+          <div class="step-num">3</div>
+          <div><strong style="font-size: 15px;">Install Filter, Heater &amp; Lighting</strong>
+            <p style="margin: 8px 0 0; font-size: 14px; color: var(--text-secondary);">Install your filter on the back
+              or inside the tank. Set the heater to 76–80°F for tropical fish. Connect your LED lighting system and set
+              timer for 8–10 hours of light per day.</p>
+          </div>
+        </div>
+        <div class="aquarium-step fade-in">
+          <div class="step-num">4</div>
+          <div><strong style="font-size: 15px;">Fill with Treated Water</strong>
+            <p style="margin: 8px 0 0; font-size: 14px; color: var(--text-secondary);">Fill with tap water and
+              immediately add water conditioner to neutralise chlorine and chloramine. Test pH (target 7.0 for most
+              community fish) and temperature before proceeding.</p>
+          </div>
+        </div>
+        <div class="aquarium-step fade-in">
+          <div class="step-num">5</div>
+          <div><strong style="font-size: 15px;">Cycle the Aquarium (2–4 Weeks)</strong>
+            <p style="margin: 8px 0 0; font-size: 14px; color: var(--text-secondary);">This is the most important step.
+              Add beneficial bacteria starter and run the filter. Test ammonia and nitrite levels daily. Only add fish
+              when both read 0 ppm and nitrate appears.</p>
+          </div>
+        </div>
+        <div class="aquarium-step fade-in">
+          <div class="step-num">6</div>
+          <div><strong style="font-size: 15px;">Introduce Fish Gradually</strong>
+            <p style="margin: 8px 0 0; font-size: 14px; color: var(--text-secondary);">Add fish slowly — no more than
+              3–4 fish per week. Float the bag for 15 minutes to temperature-equalise, then net fish into the tank. Do
+              not add bag water to your tank.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FAQ -->
+  <section class="section-padding" style="border-top: 1px solid var(--border);">
+    <div class="container" style="max-width: 800px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span
+          style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Common
+          Questions</span>
+        <h2 style="margin-top: 12px;">Aquarium FAQs</h2>
+      </div>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-header"><span>What size aquarium is best for beginners?</span><span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">A 20-gallon tank is ideal for beginners. Larger tanks have more stable water
+            chemistry, making them easier to manage. Avoid nano tanks under 5 gallons unless you have experience — they
+            require much more precise maintenance to keep parameters stable.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header"><span>How long does it take to cycle a new aquarium?</span><span
+              class="faq-icon">+</span></div>
+          <div class="faq-content">The nitrogen cycle typically takes 4–6 weeks. However, using a bacterial starter
+            product (like API Quick Start or Seachem Stability) can significantly reduce cycling time to as little as 2
+            weeks. Test water daily and only add fish when ammonia and nitrite both read 0 ppm.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header"><span>What fish are best for community tanks?</span><span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">For beginners, excellent community fish include Neon Tetras, Guppies, Mollies,
+            Corydoras Catfish, and Harlequin Rasboras. They are hardy, peaceful, and colourful. Avoid aggressive species
+            like Tiger Barbs, Cichlids (most), and Bettas in community setups.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header"><span>How often should I feed my fish?</span><span class="faq-icon">+</span></div>
+          <div class="faq-content">Feed adult fish once or twice daily — only as much as they consume in 2–3 minutes.
+            Overfeeding is the #1 cause of poor water quality and fish death. Uneaten food decomposes, spikes ammonia,
+            and promotes algae growth.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header"><span>Do live plants require special lighting?</span><span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">Low-light plants like Java Fern, Anubias, and Cryptocoryne grow well under standard
+            LED aquarium lights for 8–10 hours daily. Medium and high-light plants (Rotala, Monte Carlo, Dwarf Hair
+            Grass) need full-spectrum LEDs rated at 50+ PAR. Our programmable LED bar supports both beginner and
+            advanced planted tanks.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-padding"
+    style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); text-align: center;">
+    <div class="container">
+      <h2 style="color: #FAF8F3; margin-bottom: 16px;">Build Your Dream Aquarium Today</h2>
+      <p
+        style="color: rgba(250,248,243,0.9); max-width: 540px; margin: 0 auto 32px; font-size: 15px; line-height: 1.7;">
+        Whether you're building your first tank or upgrading to a reef system — our aquarium experts are here to help.
+        Shop our full range with free shipping on orders over $49.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#catalog" class="btn"
+          style="background: #FAF8F3; color: var(--primary); padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 14px;">Shop
+          All Aquarium Products</a>
+        <a href="contact.html" class="btn"
+          style="background: rgba(250,248,243,0.2); color: #FAF8F3; border: 1px solid rgba(250,248,243,0.5); padding: 14px 28px; border-radius: 8px; font-weight: 550; font-size: 14px;">Contact
+          an Aquarium Expert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="index.html" class="logo-container" style="margin-bottom: 20px; text-decoration: none;">
+            <div class="logo-icon">P</div><span class="logo-text">PET SHOP</span>
+          </a>
+          <p style="margin-bottom: 24px; max-width: 320px;">Your one-stop destination for premium pet supplies, food,
+            and grooming services.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to Pet Shop!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+        </div>
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="fish.html">Fish &amp; Aquatics</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="grooming.html">Professional Grooming</a></li>
+            <li><a href="contact.html">Veterinary Advice</a></li>
+            <li><a href="brands.html">Brand Catalog</a></li>
+            <li><a href="contact.html">Wholesale Enquiries</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Support &amp; FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 Pet Shop Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const catalogItems = document.querySelectorAll('.catalog-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.getAttribute('data-filter');
+        catalogItems.forEach(item => { item.style.display = (f === 'all' || item.getAttribute('data-category') === f) ? 'flex' : 'none'; });
+      });
+    });
+  </script>
+</body>
+
+</html>

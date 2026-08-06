@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop | Contact Us & Store Location</title>
+  <meta name="description"
+    content="Get in touch with the Pet Shop. Ask about our premium foods, grooming services, or find store hours and our location.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .story-hero {
+      padding: 180px 0 100px;
+      background-color: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 992px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .contact-info-block {
+      background-color: var(--bg-secondary);
+      border-radius: 12px;
+      padding: 40px;
+      height: fit-content;
+    }
+
+    .contact-info-item {
+      margin-bottom: 32px;
+      text-align: start;
+    }
+
+    .contact-info-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 550;
+      color: var(--secondary);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    /* Responsive Map Layout */
+    .map-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid var(--border);
+      box-shadow: var(--card-shadow);
+      background-color: var(--surface);
+      height: 450px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .map-container {
+        height: 350px;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">P</div>
+          <span class="logo-text">PET SHOP</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"
+                fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;">
+                <path d="M7 10l5 5 5-5z" />
+              </svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Store</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="dogs.html" class="nav-link">Dogs</a>
+        <a href="cats.html" class="nav-link">Cats</a>
+        <a href="birds.html" class="nav-link">Birds</a>
+        <a href="fish.html" class="nav-link">Fish</a>
+        <a href="grooming.html" class="nav-link">Grooming</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Store</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="dogs.html" class="nav-link">Dogs</a>
+      <a href="cats.html" class="nav-link">Cats</a>
+      <a href="birds.html" class="nav-link">Birds</a>
+      <a href="fish.html" class="nav-link">Fish</a>
+      <a href="grooming.html" class="nav-link">Grooming</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Header Banner -->
+  <section class="story-hero">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.15em;">Communication
+        portal</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Get In Touch</h1>
+      <p
+        style="max-width: 680px; margin: 24px auto 0; color: var(--text-secondary); font-size: 18px; line-height: 1.8; font-weight: 480;">
+        Have questions about our premium products, grooming services, pet adoption events, or store location? We're here
+        to help!</p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: Form -->
+        <div class="fade-in">
+          <form
+            style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 40px; box-shadow: var(--card-shadow);"
+            onsubmit="event.preventDefault(); alert('Your message has been submitted. Our pet care team will follow up within 24 hours!'); this.reset();">
+
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Jane Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="jane@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiry-type">Reason for Inquiry</label>
+              <select id="inquiry-type" class="form-control" required
+                style="appearance: none; background: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22none%22%3E%3Cpath d=%22M7 9l3 3 3-3%22 stroke=%22%236b7280%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E') no-repeat right 16px center var(--surface); background-size: 20px;">
+                <option value="support">Pet Product Questions</option>
+                <option value="grooming">Grooming Appointment Inquiries</option>
+                <option value="adoption">Adoptions & Community Events</option>
+                <option value="feedback">Store Feedback & Support</option>
+                <option value="general">Other General Questions</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-msg">Message</label>
+              <textarea id="contact-msg" class="form-control" rows="5" placeholder="Tell us how we can help you..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <!-- Right: Info block -->
+        <div class="contact-info-block fade-in">
+          <div class="contact-info-item">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <svg style="width:18px;height:18px;flex-shrink:0;color:var(--primary);" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <h3 class="contact-info-title" style="margin-bottom:0;">Customer Care</h3>
+            </div>
+            <p style="font-weight: 550; font-size: 18px; color: var(--text-primary);">hello@petshop.com</p>
+            <p style="font-size: 14px; margin-top: 4px; color: var(--text-secondary);">Response time: Within 12-24 hours
+            </p>
+          </div>
+
+          <div class="contact-info-item">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <svg style="width:18px;height:18px;flex-shrink:0;color:var(--primary);" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <h3 class="contact-info-title" style="margin-bottom:0;">Grooming Desk</h3>
+            </div>
+            <p style="font-weight: 550; font-size: 18px; color: var(--text-primary);">grooming@petshop.com</p>
+            <p style="font-size: 14px; margin-top: 4px; color: var(--text-secondary);">Direct line to schedule styling
+              and bathing for your pets.</p>
+          </div>
+
+          <div class="contact-info-item">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <svg style="width:18px;height:18px;flex-shrink:0;color:var(--primary);" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <h3 class="contact-info-title" style="margin-bottom:0;">Store Location</h3>
+            </div>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">Pet Shop Inc.<br>123 Pet Avenue,
+              Paws Town<br>PT 12345</p>
+          </div>
+
+          <div class="contact-info-item">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <svg style="width:18px;height:18px;flex-shrink:0;color:var(--primary);" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <h3 class="contact-info-title" style="margin-bottom:0;">Store Hours</h3>
+            </div>
+            <p style="font-size: 15px; color: var(--text-secondary);">Mon - Fri: 9:00 AM - 8:00 PM<br>Saturday: 10:00 AM
+              - 6:00 PM<br>Sunday: Closed</p>
+          </div>
+
+          <!-- Social media icon block with hover translation transitions -->
+          <div class="contact-info-item" style="margin-bottom: 0;">
+            <h3 class="contact-info-title" style="margin-bottom: 16px;">Follow Our Pets</h3>
+            <div style="display: flex; gap: 20px;">
+              <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-icon-hover" style="color: var(--text-primary);"
+                aria-label="X (formerly Twitter)">
+                <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                </svg>
+              </a>
+              <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map Mockup Section -->
+  <section class="section-padding" style="background-color: var(--bg-primary); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Our
+          Location</span>
+        <h2 style="margin-top: 12px;">Visit Our Main Store</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px; max-width: 500px; margin-inline: auto;">Drop by our
+          friendly neighborhood pet store. Bring your leashed pets along while you shop!</p>
+      </div>
+
+      <div class="map-container">
+        <!-- Google Map Embed -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100729.13020668478!2d-122.38531766627196!3d38.30035073151888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80850616b2308e01%3A0xc07ce88ffbc2c72!2sNapa%20Valley%2C%20CA!5e0!3m2!1sen!2sus!4v1718000000000!5m2!1sen!2sus"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion section -->
+  <section class="section-padding" style="border-top: 1px solid var(--border);">
+    <div class="container" style="max-width: 800px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Pet
+          Store FAQ</span>
+        <h2>Quick FAQs</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Do you ship internationally?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>Because our pet food and accessories vary in weight, we currently only ship within the contiguous United
+              States. We cannot ship internationally at this time due to customs regulations on food and supplements.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>How do I book a grooming appointment?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>You can book a grooming appointment by calling us directly, emailing our grooming desk, or filling out
+              our contact form with "Grooming Appointment Inquiries". We suggest booking at least a week in advance!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>What is your return policy?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>We offer a 30-day return policy on all unused accessories, toys, and unopened food products. If your pet
+              didn't like a specific food, bring it back and our staff will help you find a replacement product!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="index.html" class="logo-container" style="margin-bottom: 20px; text-decoration: none;">
+            <div class="logo-icon">P</div>
+            <span class="logo-text">PET SHOP</span>
+          </a>
+          <p style="margin-bottom: 24px; max-width: 320px;">Your one-stop destination for premium pet supplies, food,
+            and grooming services. Dedicated to the well-being of all pets.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to Pet Shop!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="X (formerly Twitter)">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="fish.html">Fish & Aquatics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="fish.html">Professional Grooming</a></li>
+            <li><a href="birds.html">Pet Training</a></li>
+            <li><a href="grooming.html">Adoption Events</a></li>
+            <li><a href="brands.html">Veterinary Info</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 Pet Shop Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const inquiry = params.get('inquiry');
+      if (inquiry) {
+        const selectElement = document.getElementById('inquiry-type');
+        if (selectElement) {
+          selectElement.value = inquiry;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

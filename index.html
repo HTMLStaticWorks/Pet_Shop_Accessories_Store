@@ -1,1 +1,529 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop | Your Friendly Neighborhood Pet Store</title>
+  <meta name="description"
+    content="Discover a wide range of premium pet food, accessories, and professional grooming services for dogs, cats, birds, and fish.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">P</div>
+          <span class="logo-text">PET SHOP</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle active" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"
+                fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;">
+                <path d="M7 10l5 5 5-5z" />
+              </svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item active">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Store</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="dogs.html" class="nav-link">Dogs</a>
+        <a href="cats.html" class="nav-link">Cats</a>
+        <a href="birds.html" class="nav-link">Birds</a>
+        <a href="fish.html" class="nav-link">Fish</a>
+        <a href="grooming.html" class="nav-link">Grooming</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link active" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Store</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="dogs.html" class="nav-link">Dogs</a>
+      <a href="cats.html" class="nav-link">Cats</a>
+      <a href="birds.html" class="nav-link">Birds</a>
+      <a href="fish.html" class="nav-link">Fish</a>
+      <a href="grooming.html" class="nav-link">Grooming</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <!-- Mobile controls injected by main.js -->
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-lifestyle">
+    <div class="container">
+      <div class="hero-content fade-in visible">
+        <span class="hero-tagline">Premium Care for Your Best Friends</span>
+        <h1 class="hero-title">Everything Your Pet Needs, All in One Place</h1>
+        <p class="hero-description">Discover a wide range of premium pet food, accessories, and professional grooming
+          services to keep your furry, feathered, and scaly friends happy and healthy.</p>
+        <div class="hero-buttons">
+          <a href="dogs.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;" class="fade-in">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Shop
+          by Pet Type</span>
+        <h2 style="margin-top: 10px;">Everything for Your Furry Friends</h2>
+      </div>
+
+      <div class="product-grid">
+        <!-- Dog Card -->
+        <div class="product-card fade-in">
+          <span class="product-card-badge">Top Seller</span>
+          <div class="product-card-image">
+            <img src="assets/images/dogs.png" alt="Premium Dog Food">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <span class="product-meta">Dogs</span>
+              <h3 class="product-title">Premium Dog Food & Toys</h3>
+              <p class="product-excerpt">Keep your dog active and healthy with our wide selection of nutritious food,
+                treats, and interactive toys.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">From $14.00</span>
+              <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">Shop Dogs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat Card -->
+        <div class="product-card fade-in">
+          <span class="product-card-badge">Daily Needs</span>
+          <div class="product-card-image">
+            <img src="assets/images/cats.png" alt="Cat Supplies">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <span class="product-meta">Cats</span>
+              <h3 class="product-title">Cat Trees & Treats</h3>
+              <p class="product-excerpt">Spoil your feline friend with cozy beds, scratching posts, and delicious
+                grain-free treats.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">From $11.00</span>
+              <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">Shop Cats</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bird Card -->
+        <div class="product-card fade-in">
+          <span class="product-card-badge">Staff Pick</span>
+          <div class="product-card-image">
+            <img src="assets/images/birds.png" alt="Bird Supplies">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <span class="product-meta">Birds & Fish</span>
+              <h3 class="product-title">Bird Cages & Aquariums</h3>
+              <p class="product-excerpt">Create the perfect habitat for your birds or fish with our premium enclosures,
+                seeds, and aquatic care kits.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">From $16.00</span>
+              <a href="dogs.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">Shop More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grooming Services -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="visual-pane fade-in">
+          <!-- Unique image for this section -->
+          <img src="assets/images/appoinment.jpg" alt="Professional Pet Grooming">
+        </div>
+        <div class="fade-in">
+          <span
+            style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Pamper
+            Your Pet</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">Professional Grooming Services</h2>
+          <p style="margin-bottom: 20px;">Treat your pet to a spa day with our certified professional groomers. We offer
+            full-service grooming including bathing, haircuts, nail trimming, and ear cleaning in a stress-free
+            environment.</p>
+          <p style="margin-bottom: 32px;">Our team uses only pet-safe, hypoallergenic products to ensure your best
+            friend's coat is healthy, shiny, and smelling great. Walk-ins welcome for nail trims!</p>
+          <a href="grooming.html" class="btn btn-primary">Book an Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Brands Grid -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 60px;" class="fade-in">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Trusted
+          Partners</span>
+        <h2 style="margin-top: 10px;">Featured Brands We Carry</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon"><img src="assets/images/brand1.jpg" alt="Premium Nutrition Brands">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title">Premium Nutrition</h3>
+            <p>We stock only the best food brands like Royal Canin, Purina Pro Plan, and Hill's Science Diet to ensure
+              optimal health for your pet.</p>
+          </div>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon"><img src="assets/images/brand2.jpg" alt="Toys & Accessories">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title">Toys & Enrichment</h3>
+            <p>Keep them entertained with durable toys from KONG, Chuckit!, and Outward Hound designed for all play
+              styles.</p>
+          </div>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon"><img src="assets/images/brand3.jpg" alt="Health & Wellness">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title">Health & Wellness</h3>
+            <p>Find trusted supplements and flea/tick prevention products from Frontline, Advantix, and Zesty Paws.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Location Section -->
+  <section class="section-padding" style="background-color: var(--primary); color: white;">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="fade-in">
+          <span
+            style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: white; letter-spacing: 0.1em;">Visit
+            Us</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px; color: white;">Store Location & Opening Hours</h2>
+          <p style="color: rgba(255,255,255,0.85); margin-bottom: 24px;">We're conveniently located in the heart of the
+            city with plenty of free parking. Bring your leashed pets along while you shop!</p>
+
+          <!-- Standardized bullet lists with class icon and content to prevent icon word wrapping -->
+          <ul class="bullet-list" style="margin-bottom: 40px;">
+            <li>
+              <span class="icon" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg></span>
+              <span class="content" style="color: rgba(255,255,255,0.9);">123 Pet Avenue, Paws Town, PT 12345</span>
+            </li>
+            <li>
+              <span class="icon" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg></span>
+              <span class="content" style="color: rgba(255,255,255,0.9);">Mon - Fri: 9:00 AM - 8:00 PM</span>
+            </li>
+            <li>
+              <span class="icon" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg></span>
+              <span class="content" style="color: rgba(255,255,255,0.9);">Saturday: 10:00 AM - 6:00 PM</span>
+            </li>
+            <li>
+              <span class="icon" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg></span>
+              <span class="content" style="color: rgba(255,255,255,0.9);">Sunday: Closed</span>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn-secondary subscriber-btn"
+            style="border-color: rgba(255,255,255,0.8); color: white;">Get Directions</a>
+        </div>
+        <div class="visual-pane fade-in">
+          <!-- Unique image for store -->
+          <img src="assets/images/petshop-front.jpg" alt="Pet Store Front" style="border-radius: 12px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adoption Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="editorial-grid reverse">
+        <div class="visual-pane fade-in">
+          <!-- Unique image for adoption -->
+          <img src="assets/images/adoption.jpg" alt="Pet Adoption Event">
+        </div>
+        <div class="fade-in">
+          <span
+            style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Community</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">Find Your New Best Friend</h2>
+          <p style="margin-bottom: 20px;">We partner with local animal shelters to host adoption events every weekend.
+            Come meet dogs and cats looking for their forever homes.</p>
+          <p style="margin-bottom: 32px;">Every adopted pet goes home with a free starter kit containing a bag of food,
+            a collar, and their first toy!</p>
+          <a href="about.html" class="btn btn-secondary">Learn About Adoptions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;" class="fade-in">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Customer
+          Stories</span>
+        <h2 style="margin-top: 10px;">Happy Pets, Happy Owners</h2>
+      </div>
+
+      <div class="product-grid">
+        <!-- Testimonial 1 -->
+        <div class="benefit-card fade-in"
+          style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 36px 28px; justify-content: space-between;">
+          <span
+            style="font-size: 48px; color: var(--secondary); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif;">&ldquo;</span>
+          <div class="review-stars"
+            style="color: var(--secondary); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px;"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></div>
+          <p
+            style="font-family: var(--font-serif); font-size: 17px; font-style: italic; line-height: 1.7; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
+            The grooming staff is incredible! My poodle came out looking like a show dog. They were so gentle with him
+            and the shop has everything I need.</p>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="assets/images/testi1.jpg" alt="Dr. Evelyn Carter"
+              style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--secondary);">
+            <div>
+              <h4 style="font-family: var(--font-sans); font-size: 15px; font-weight: 550; color: var(--text-primary);">
+                Evelyn Carter</h4>
+              <span style="font-size: 12px; color: var(--text-secondary);">Dog Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="benefit-card fade-in"
+          style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 36px 28px; justify-content: space-between;">
+          <span
+            style="font-size: 48px; color: var(--secondary); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif;">&ldquo;</span>
+          <div class="review-stars"
+            style="color: var(--secondary); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px;"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></div>
+          <p
+            style="font-family: var(--font-serif); font-size: 17px; font-style: italic; line-height: 1.7; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
+            I love the wide selection of premium cat food. The staff always takes the time to answer my questions and
+            suggest the best products for my kittens.</p>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="assets/images/testi2.jpg" alt="Marcus Vance"
+              style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--secondary);">
+            <div>
+              <h4 style="font-family: var(--font-sans); font-size: 15px; font-weight: 550; color: var(--text-primary);">
+                Marcus Vance</h4>
+              <span style="font-size: 12px; color: var(--text-secondary);">Cat Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="benefit-card fade-in"
+          style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 36px 28px; justify-content: space-between;">
+          <span
+            style="font-size: 48px; color: var(--secondary); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif;">&ldquo;</span>
+          <div class="review-stars"
+            style="color: var(--secondary); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px;"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              stroke="none" style="margin-right: 2px;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></div>
+          <p
+            style="font-family: var(--font-serif); font-size: 17px; font-style: italic; line-height: 1.7; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
+            Great prices and a fantastic rewards program. They also helped me set up my first aquarium with expert
+            advice. Highly recommend this pet shop!</p>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="assets/images/testi3.jpg" alt="Sarah Lin"
+              style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--secondary);">
+            <div>
+              <h4 style="font-family: var(--font-sans); font-size: 15px; font-weight: 550; color: var(--text-primary);">
+                Sarah Lin</h4>
+              <span style="font-size: 12px; color: var(--text-secondary);">Fish Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter & Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="index.html" class="logo-container" style="margin-bottom: 20px; text-decoration: none;">
+            <div class="logo-icon">P</div>
+            <span class="logo-text">PET SHOP</span>
+          </a>
+          <p style="margin-bottom: 24px; max-width: 320px;">Your one-stop destination for premium pet supplies, food,
+            and grooming services. Dedicated to the well-being of all pets.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to Pet Shop!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="X (formerly Twitter)">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="dogs.html">Cats</a></li>
+            <li><a href="dogs.html">Birds</a></li>
+            <li><a href="dogs.html">Fish & Aquatics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="fish.html">Professional Grooming</a></li>
+            <li><a href="birds.html">Pet Training</a></li>
+            <li><a href="grooming.html">Adoption Events</a></li>
+            <li><a href="brands.html">Veterinary Info</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 Pet Shop Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
