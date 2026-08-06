@@ -1015,7 +1015,6 @@ body.dark-theme .faq-item {
   font-family: var(--font-serif);
   font-size: 24px;
   font-weight: 540;
-  display: flex;
   align-items: flex-start;
   margin-bottom: 12px;
   color: var(--text-primary);
@@ -2947,4 +2946,389 @@ section[style*="padding-top:150px"] .container,
 .blog-hero .container {
   position: relative;
   z-index: 1;
+}
+
+/* ===================================================
+   ADDITIONAL STYLING FIXES (13 LAYOUT ITEMS)
+   =================================================== */
+
+/* 1. index.html (Home Page 1) - Visit Us Section night theme */
+body.dark-theme .visit-us-section {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark-theme .visit-us-section h2 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-theme .visit-us-section p {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-theme .visit-us-section ul.bullet-list li span.icon {
+  color: var(--secondary) !important;
+}
+
+body.dark-theme .visit-us-section ul.bullet-list li span.content {
+  color: var(--text-primary) !important;
+}
+
+body.dark-theme .visit-us-section .subscriber-btn {
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-theme .visit-us-section .subscriber-btn:hover {
+  background-color: var(--primary) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+}
+
+/* 2. index.html (Home Page 1) - COMMUNITY Section mobile 360 layout */
+@media (max-width: 360px) {
+  .editorial-grid.reverse {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .editorial-grid.reverse .visual-pane {
+    order: -1 !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+/* 3. home-2.html (Home Page 2) - Center align hero heading & button; tab mob and 1024px keep img next line */
+@media (max-width: 1024px) {
+  .hero-science {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    text-align: center !important;
+  }
+
+  .science-hero-left {
+    align-items: center !important;
+    text-align: center !important;
+    padding: 60px 24px !important;
+  }
+
+  .science-hero-left p {
+    margin-inline: auto !important;
+  }
+
+  .science-hero-left div {
+    justify-content: center !important;
+  }
+
+  .science-hero-right {
+    min-height: 350px !important;
+  }
+}
+
+/* 4. home-2.html (Home Page 2) - PET CATEGORIES buttons primary color & center align */
+.curated-cultures-section .product-card-info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.curated-cultures-section .product-card-info .btn-secondary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+.curated-cultures-section .product-card-info .btn-secondary:hover {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+
+/* 5. home-2.html (Home Page 2) - THE QUALITY STANDARD night theme */
+body.dark-theme .quality-commitment-banner {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark-theme .quality-commitment-banner h2 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-theme .quality-commitment-banner p {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-theme .quality-commitment-banner .btn-secondary {
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-theme .quality-commitment-banner .btn-secondary:hover {
+  background-color: var(--primary) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+}
+
+/* 6. Non-home pages hero sections background images */
+.story-hero {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.abt-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/abt3.jpg') !important;
+}
+
+.dog-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/dog-collection.jpg') !important;
+}
+
+.cat-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/cat-collection.jpg') !important;
+}
+
+.bird-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/bird-collection.jpg') !important;
+}
+
+.fish-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/fish-nutrition.jpg') !important;
+}
+
+.groom-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/appoinment.jpg') !important;
+}
+
+.brand-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/brand1.jpg') !important;
+}
+
+.contact-bnr {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('../assets/images/petshop-front.jpg') !important;
+}
+
+body.dark-theme .abt-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/abt3.jpg') !important;
+}
+
+body.dark-theme .dog-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/dog-collection.jpg') !important;
+}
+
+body.dark-theme .cat-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/cat-collection.jpg') !important;
+}
+
+body.dark-theme .bird-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/bird-collection.jpg') !important;
+}
+
+body.dark-theme .fish-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/fish-nutrition.jpg') !important;
+}
+
+body.dark-theme .groom-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/appoinment.jpg') !important;
+}
+
+body.dark-theme .brand-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/brand1.jpg') !important;
+}
+
+body.dark-theme .contact-bnr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../assets/images/petshop-front.jpg') !important;
+}
+
+/* 7. about.html - Mobile 360 padding for Quality Assurance section */
+@media (max-width: 360px) {
+  .quality-assurance-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* 8. about.html - above the footer (CTA/pre-footer) night theme */
+body.dark-theme .about-cta-section {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark-theme .about-cta-section h2 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-theme .about-cta-section p {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-theme .about-cta-section .btn-secondary {
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-theme .about-cta-section .btn-secondary:hover {
+  background-color: var(--primary) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+}
+
+/* 9. 768px view footer 2x2 layout */
+@media (min-width: 601px) and (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+/* 11. dogs.html - Mobile 360 padding for PET SPA SERVICES */
+@media (max-width: 360px) {
+  .dog-spa-services-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* 12. fish.html - Mobile 360 padding for AQUARIUM MAINTENANCE */
+@media (max-width: 360px) {
+  .aquarium-maintenance-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* ===================================================
+   ADDITIONAL STYLING FIXES (ROUND 2)
+   =================================================== */
+
+/* 1. home1 page Find Your New Best Friend section button should be visible in dark mode and mob view keep img fst move content next line */
+body.dark-theme .adoption-section .btn-secondary {
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+  background-color: var(--surface) !important;
+}
+
+body.dark-theme .adoption-section .btn-secondary:hover {
+  background-color: var(--primary) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+}
+
+@media (max-width: 768px) {
+  .adoption-section .editorial-grid.reverse {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .adoption-section .editorial-grid.reverse .visual-pane {
+    order: -1 !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+/* 2. home2 page Shop Premium Supplies By Pet Type section heading align center */
+.curated-cultures-section h2 {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* 3. about page Approved by Veterinarians section mob view give left and right equal space */
+@media (max-width: 768px) {
+  .quality-assurance-section {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* 4. dogs page Professional Dog Grooming Packages section is not responsive in mob view fix it */
+@media (max-width: 768px) {
+  .dog-spa-services-section .editorial-grid.reverse {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .dog-spa-services-section .editorial-grid.reverse .visual-pane {
+    order: -1 !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .dog-spa-services-section div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 5. fish page Keep Your Aquarium Crystal Clear & Thriving section make responsive in mob view fix it */
+@media (max-width: 768px) {
+  .aquarium-maintenance-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .aquarium-maintenance-section .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .aquarium-maintenance-section .editorial-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .aquarium-maintenance-section .editorial-grid .visual-pane {
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .aquarium-maintenance-section .editorial-grid div[style*="text-align: start"] {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .aquarium-maintenance-section .editorial-grid div[style*="text-align: start"] ul {
+    align-items: flex-start !important;
+    text-align: start !important;
+  }
+
+  .aquarium-maintenance-section .editorial-grid div[style*="text-align: start"] .btn {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Round 3 Styling Fixes */
+/* 2. about page Approved by Veterinarians section mob view make it responsive */
+@media (max-width: 768px) {
+  .quality-assurance-section .editorial-grid.reverse {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .quality-assurance-section .editorial-grid.reverse .visual-pane {
+    order: -1 !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .quality-assurance-section .editorial-grid.reverse div[style*="text-align: start"] {
+    text-align: center !important;
+  }
+}
+
+/* 3. home2 Shop Premium Supplies By Pet Type section card heading also align center */
+.curated-cultures-section .product-card .product-title {
+  text-align: center !important;
+  width: 100% !important;
 }
